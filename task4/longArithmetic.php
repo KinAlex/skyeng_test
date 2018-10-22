@@ -34,14 +34,13 @@ function sum(string $a, string $b) : string
             $totalNum = $ost.$totalNum;
             $inMind = 1;
         } else {
-            $tempSumWithMind = $sumTemp + $inMind;            
             $inMind = 0;
-            if ($tempSumWithMind > 9) {
+            if ($sumTemp > 9) {
                 $ost = $sumTemp - 9;
                 $totalNum = $ost.$totalNum;
                 $inMind = 1;
             }
-            $totalNum = $tempSumWithMind.$totalNum;
+            $totalNum = $sumTemp.$totalNum;
         }
     }
 
