@@ -25,7 +25,8 @@ function sum($a, $b) : string
         $diff = $strlenA - $shortest;
         $longString = $a;
     }
-
+    
+    $inMind = 0;
     for ($i = 1; $i < $shortest + 1; $i++) {
         $sumTemp = $a[$strlenA - $i] + $b[$strlenB - $i] + $inMind;
         if ($sumTemp > 9) {
@@ -33,7 +34,7 @@ function sum($a, $b) : string
             $totalNum = $ost.$totalNum;
             $inMind = 1;
         } else {
-            $tempSumWithMind = $sumTemp + $inMind;
+            $tempSumWithMind = $sumTemp + $inMind;            
             $inMind = 0;
             if ($tempSumWithMind > 9) {
                 $ost = $sumTemp - 9;
@@ -48,10 +49,10 @@ function sum($a, $b) : string
         if ($strlenA === $strlenB) {
             return '1'.$totalNum;
         }
-
+        
         for ($i = $diff - 1; $i >= 0; $i--) {
             $tmpNum = $longString[$i] + 1;
-            if ($tmpNum + 1 === 10) {
+            if ($tmpNum === 10) {
                 $totalNum = '0'.$totalNum;
             } else {
                 $totalNum = substr($longString, 0, $diff - 1) . $tmpNum . $totalNum;
@@ -66,5 +67,5 @@ function sum($a, $b) : string
         return $totalNum;
     }
 
-    return $totalNum;
+    return substr($longString, 0, $diff) . $totalNum;
 }
