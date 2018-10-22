@@ -35,11 +35,6 @@ function sum(string $a, string $b) : string
             $inMind = 1;
         } else {
             $inMind = 0;
-            if ($sumTemp > 9) {
-                $ost = $sumTemp - 9;
-                $totalNum = $ost.$totalNum;
-                $inMind = 1;
-            }
             $totalNum = $sumTemp.$totalNum;
         }
     }
