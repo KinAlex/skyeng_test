@@ -11,7 +11,7 @@
  * @param $b
  * @return string
  */
-function sum($a, $b) : string
+function sum(string $a, string $b) : string
 {
     $totalNum = '';
     $inMind = 0;
