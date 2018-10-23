@@ -35,7 +35,7 @@ class AnotherDataProvider implements DataProviderInterface
      *
      * @return array
      */
-    public function get(array $request)
+    public function get(array $request) : array
     {
         // returns a response from external service
     }
