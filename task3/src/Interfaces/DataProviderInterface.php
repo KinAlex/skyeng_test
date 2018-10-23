@@ -11,5 +11,5 @@ namespace src\Interfaces;
 
 interface DataProviderInterface
 {
-    public function get(array $request);
+    public function get(array $request) : array;
 }
