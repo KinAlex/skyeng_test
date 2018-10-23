@@ -11,7 +11,7 @@ namespace src\Integration;
 
 use src\Interfaces\DataProviderInterface;
 
-class DataProvider implements DataProviderInterface
+class AnotherDataProvider implements DataProviderInterface
 {
     private $host;
     private $user;
